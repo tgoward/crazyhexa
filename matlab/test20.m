@@ -1,0 +1,11 @@
+r=0.5;
+alpha=degrad(20);
+theta=degrad(60);
+fx=[sin(0)*sin(alpha),sin(theta)*sin(-alpha),sin(2*theta)*sin(alpha),sin(3*theta)*sin(-alpha),sin(4*theta)*sin(alpha),sin(5*theta)*sin(-alpha)];
+fy=[-cos(0)*sin(alpha),-cos(theta)*sin(-alpha),-cos(2*theta)*sin(alpha),-cos(3*theta)*sin(-alpha),-cos(4*theta)*sin(alpha),-cos(5*theta)*sin(-alpha)];
+fz=[cos(alpha),cos(-alpha),cos(alpha),cos(-alpha),cos(alpha),cos(-alpha)];
+rx=[r*sin(0)*cos(alpha),r*sin(theta)*cos(-alpha),r*sin(2*theta)*cos(alpha),r*sin(3*theta)*cos(-alpha),r*sin(4*theta)*cos(alpha),r*sin(5*theta)*cos(-alpha)];
+ry=[-r*cos(0)*cos(alpha),-r*cos(theta)*cos(-alpha),-r*cos(2*theta)*cos(alpha),-r*cos(3*theta)*cos(-alpha),-r*cos(4*theta)*cos(alpha),-r*cos(5*theta)*cos(-alpha)];
+rz=[-r*sin(alpha),-r*sin(-alpha),-r*sin(alpha),-r*sin(-alpha),-r*sin(alpha),-r*sin(-alpha)];
+M=[fx;fy;fz;rx;ry;rz]
+rang=rank(M)

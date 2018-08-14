@@ -280,7 +280,7 @@ Pour que le drone puisse être flashé il faut le mettre en mode bootload. Il fa
 ### Prérequis
 
 Installation du cfclient et de ROS ci-dessus.
-Le drone modifié avec les pièces imprimées disponible dans le dossier crazyhexa/crazyflie_plan/STL.
+Le drone modifié avec les pièces imprimées disponible dans le dossier crazyhexa/crazyflie_plan/STL et un cicuit de puissance pour les moteurs supplémentaires
 
 
 ### Installation
@@ -316,20 +316,6 @@ et remplacer le contenu par celui du fichier ~/crazyhexa/ROS/crazyhexaflat.txt
 Brancher la manette, allumer le drone et le déposer dans le systeme de capture.
 Lancer le programme en suivant les instructions décrite ci-dessus dans la partie "Utilisation du système"
 
-## Hexarotor Incliné
-
-### Prérequis
-
-Instalation du cfclient et de ROS.
-Pièces du dossier crazyhexa/hexarotor_incline/STL imprimée et montées sur le drone.
-
-### Installation
-
-* N.B.: le drone est stable avec le client cfclient mais pas avec ROS et le système de capture (il faut travailler le tuning des gains de commande)
-
-Pour utilisé l'hexarotor incliné, il faut modifier le firmware du drone en prenant le dossier ~/crazyhexa/hexarotor_incline/crazyflie-firmware-WIP/src/ dans le même dossier que précedement
-
-Le pilotage avec le client cfclient et ROS s'effectue de la même façon que pour le classique
 
 ## Analyse des résultats
 Le script d'enregistrement des données met dans un fichier .txt les éléments suivants:
@@ -341,14 +327,6 @@ fileID = fopen('aborescence/où/le/fichier/est/saugardé.txt','r');
 %---------------------t x  y  z  Wx Wy Wz r  p  yaw
 C = textscan(fileID,'%f %f %f %f %f %f %f %f %f %f\n');
 ```
-
-
-## Ressources
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 
 ## Auteur
 

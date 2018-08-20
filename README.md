@@ -184,8 +184,9 @@ Et remplacer
 <include file="$(find vicon_bridge)/launch/vicon.launch"/>
 ```
 par
+```
 <include file="$(find vrpn_client_ros)/launch/sample.launch"/>
-
+```
 Le paramètrage est terminé.
 Il faut rafraichir le répertoire
 
@@ -285,10 +286,10 @@ Le drone modifié avec les pièces imprimées disponible dans le dossier crazyhe
 
 ### Installation
 
-Supprimer le dossier crazyflie-firmware/src et le remplacer par crazyhexa/crazyflie_plan/firmware_hexa_coaxial/src .
+Compiler le firmware .
 Recompiler le firmware
 ```
-cd ~/crazyflie-firmware
+cd ~/crazyhexa/hexarotor_plan/firmware_hexa_coaxial
 make clean
 make
 make cload
